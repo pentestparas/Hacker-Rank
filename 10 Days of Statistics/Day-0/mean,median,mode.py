@@ -1,4 +1,4 @@
-import statistics
+from scipy import stats
 import numpy
 
 n = int(input().strip())
@@ -6,6 +6,10 @@ arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
 print(numpy.mean(arr))
 print(numpy.median(arr))
 
+#method 1:
+print(int(stats.mode(numbers)[0]))
+
+#method 2:
 def mode(arr):
     list_table = statistics._counts(arr)
     len_table = len(list_table)
